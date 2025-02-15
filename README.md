@@ -39,4 +39,4 @@ It appears that Jibo incorporates this SOM board design directly onto its carrie
 the location for a spare debug USB, JTAG and either the PCIe or additional GPIO (SPI/I2C ports). See
 ![CPU](images/Jibo_PCB_wLabel.jpg) and ![CPU2](images/Jibo_JTAG_wLabel.png)
 
-Details on the SK Hynix eMMC chip are located in [memory](documents/SK_hynix_1ynm_64Gb_eMMC5 1_ver1 6.pdf)
+Details on the SK Hynix eMMC chip are located in [memory](documents/SK_hynix_1ynm_64Gb_eMMC5_1_ver1_6.pdf)
