@@ -7,7 +7,7 @@ Jibo mainboard was based upon hardware designed by Avionic's Design
 
     [    0.000000] Machine: Avionic Design Meerkat (Device Tree), model: Avionic Design Tobor All In One, serial: 0
     
-Details on that board and its related carrier board are described here [Tegra K1 SOM](documents/Tegra K1 SOM manual.pdf) 
+Details on that board and its related carrier board are described here [Tegra K1 SOM](documents/Tegra_K1_SOM_manual.pdf) 
 and [Meerkat Carrier Board](documents/Meerkat_k1_eval_kit.pdf). 
 
 The Kein board provides support for:
@@ -39,4 +39,4 @@ It appears that Jibo incorporates this SOM board design directly onto its carrie
 the location for a spare debug USB, JTAG and either the PCIe or additional GPIO (SPI/I2C ports). See
 ![CPU](images/Jibo_PCB_wLabel.jpg) and ![CPU2](images/Jibo_JTAG_wLabel.png)
 
-Details on the SK Hynix eMMC chip are located in [memory](documents/SK hynix 1ynm_64Gb_eMMC5 1_ver1 6.pdf)
+Details on the SK Hynix eMMC chip are located in [memory](documents/SK_hynix_1ynm_64Gb_eMMC5 1_ver1 6.pdf)
