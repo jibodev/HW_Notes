@@ -35,8 +35,39 @@ The Kein board provides support for:
 * 1x S/PDIF In/Out
 * 1x standard HDMI 1.4b
 
-It appears that Jibo incorporates this SOM board design directly onto its carrier board. From these documents we can take a guess at the unpopulated pads on the Jibo cpu board. From these we have identified
-the location for a spare debug USB, JTAG and either the PCIe or additional GPIO (SPI/I2C ports). See
-![CPU](images/Jibo_PCB_wLabel.jpg) and ![CPU2](images/Jibo_JTAG_wLabel.png)
+It appears that Jibo incorporates this SOM board design directly onto its carrier board. 
+
+The Meerkat SOM looks like ![TK1 SOM](images/Meerkat_SOM.png) while Jibo looks like ![Jibo SOM](images/Jibo_SOM.png)
+
+From these documents we can guess at the unpopulated pads on the Jibo cpu board, identifying the location for a spare 
+debug USB, JTAG and either the PCIe or additional GPIO (SPI/I2C ports) ![JTAG](images/labeled.png)
+
+The underside of the board looks like ![Underside](images/Underside.png). The test points might be used to exfiltrate
+the eMMC and will be identified.
+
+From the SOM manual "The Tegra K1 has four SD/MMC controllers. The Meerkat uses SDMMC3 for an SD Card interface and
+SDMMC4 to interface to an eMMC device (primary boot option). SDMMC1 is available to use as SDIO.
+SDMMC2 is not routed on the Meerkat SoM.
+
+For the SD Card and SDIO interfaces, SDMMC3 and SDMMC1 support up to UHS-1. For eMMC, SDMMC4
+supports up to HS200." 
 
 Details on the SK Hynix eMMC chip are located in [memory](documents/SK_hynix_1ynm_64Gb_eMMC5_1_ver1_6.pdf)
+
+## Power 
+Jibo gets power from the rectangular X1 JST American 10 pin 1.5mm spacing connector, part number ZPDR-10V-S and
+BM10B-ZPDSS-TF available at Digikey (455-2528-ND, 455-BM10B-ZPDSS-TFCT-ND). This connector receives power from a LiIon
+regulator/charger in the robots base. I2C (SMB) is used to control the charger and passed along the cable, along with a 
+power good and enable.
+
+### Known Pinouts 
+ - 1 +18.6 V
+ - 2 +18.6 V
+ - 3
+ - 4
+ - 5 
+ - 6 Gnd
+ - 7 Gnd
+ - 8
+ - 9
+ - 10
