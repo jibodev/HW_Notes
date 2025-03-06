@@ -35,15 +35,16 @@ The Kein board provides support for:
 * 1x S/PDIF In/Out
 * 1x standard HDMI 1.4b
 
-It appears that Jibo incorporates this SOM board design directly onto its carrier board. 
+It appears that Jibo incorporates this SOM board design directly onto its carrier board. See 
+![Jibo_Concept](images/Jibo_board_concept.png) and ![JIBO Board](images/SOM_to_Jibo_Concept.png)
 
 The Meerkat SOM looks like ![TK1 SOM](images/Meerkat_SOM.png) while Jibo looks like ![Jibo SOM](images/Jibo_SOM.png)
 
 From these documents we can guess at the unpopulated pads on the Jibo cpu board, identifying the location for a spare 
 debug USB, JTAG and either the PCIe or additional GPIO (SPI/I2C ports) ![JTAG](images/labeled.png)
 
-The underside of the board looks like ![Underside](images/Underside.png). The test points might be used to exfiltrate
-the eMMC and will be identified.
+The underside of the board looks like ![Underside](images/Underside.png) 
+The test points might be used to exfiltrate the eMMC and will be identified.
 
 From the SOM manual "The Tegra K1 has four SD/MMC controllers. The Meerkat uses SDMMC3 for an SD Card interface and
 SDMMC4 to interface to an eMMC device (primary boot option). SDMMC1 is available to use as SDIO.
@@ -53,6 +54,10 @@ For the SD Card and SDIO interfaces, SDMMC3 and SDMMC1 support up to UHS-1. For 
 supports up to HS200." 
 
 Details on the SK Hynix eMMC chip are located in [memory](documents/SK_hynix_1ynm_64Gb_eMMC5_1_ver1_6.pdf)
+
+## JTAG
+From the Meerkat schematic we can see how to populate the JTAG connector ![JTAG Parts](images/JTAG.png) 
+We will add a DigiKey cart to purchase these after we give it a try.
 
 ## Power 
 Jibo gets power from the rectangular X1 JST American 10 pin 1.5mm spacing connector, part number ZPDR-10V-S and
